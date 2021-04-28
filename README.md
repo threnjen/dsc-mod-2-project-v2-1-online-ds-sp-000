@@ -1,160 +1,115 @@
 
-# Module 2 Final Project
+# Module 2 Final Project - Housing Price Predictor
 
+For: Premiere Property Management, LLC
+
+By: Jenny Wadkins
 
 ## Introduction
 
-In this lesson, we'll review all of the guidelines and specifications for the final project for Module 2.
+>Premiere Property Management has asked me to develop a housing predictor tool. The market recently has exploded with volatility and unpredictability, with houses going 30k, 50k or even 100k over asking. Realtors need a better tool to price and predict homes. The tool should be easy to both use and understand.
 
-## Objectives
-You will be able to:
-* Describe all required aspects of the final project for Module 2
-* Describe all required deliverables
-* Describe what constitutes a successful project
+## Questions
 
-## Final Project Summary
+* What are the primary factors influencing housing prices in the King County metro area?
+* Can we effectively use a regression model based system for realtors to determine a proper list price?
+* Is a model-based system more accurate for determining list price than the traditional comps-based system?
+* What easy-to-use features can we add to our model to increase its accuracy?
 
-Another module down--you're almost half way there!
+## Methodology
+* Source data from King County
+* Clean and prepare data for model processing
+* Process data with a variety of models to find the most effective model
+* Provide a "realtor simulator" model to compare with machine learning model
+* Demonstrate ability of model to make new predictions
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-2-project-v2-1/master/halfway-there.gif)
+## Table of Contents
 
-All that remains in Module 2 is to put our newfound data science skills to use with a final project! You should expect this project to take between 20 and 25 hours of solid, focused effort. If you're done way quicker, go back and dig in deeper or try some of the optional "level up" suggestions. If you're worried that you're going to get to 30 hrs and still not even have the data imported, reach out to an instructor in Slack ASAP to get some help!
+#### [student.ipynb](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/student.ipynb
 
-## The Dataset
+> Notebook Preparation
+* Recommended Extensions
+* Importing our Modules
+* Notebook-wide Functions
 
-For this project, you'll be working with the King County House Sales dataset. We've modified the dataset to make it a bit more fun and challenging.  The dataset can be found in the file `"kc_house_data.csv"`, in this repo.
+> Preprocessing
+* Initial EDA
+* Preparing Target Variable
+* Preparing Categorical Variables
+* Preparing Continuous/Ordinal Variables
 
-The description of the column names can be found in the column_names.md file in this repository. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions relating to what the data means.
+> Visualizations with Geopandas
 
-You'll clean, explore, and model this dataset with a multivariate linear regression to predict the sale price of houses as accurately as possible.
+> Model Exploration
+* Basic Linear Regression Model
+* Linear Regression with Feature Selection Methods
+* LAD Linear Regression
+* Regularization Models - Lasso, Ridge, Elastic Net
+* K-Nearest Neighbors
+* Support Vector Regression
+* Gradient Boosting Regressor
+* Random Forest Regressor
 
-## The Deliverables
+> Regression Results and Model Selection
 
-For online students, there will be five deliverables for this project (Note: On-campus students may have different requirements, please speak with your instructor):
+> Final Model
+* Standardization Function
+* Saving Model for later
+* Preparing matrix for new predictions
 
-1. A well documented **Jupyter Notebook** containing any code you've written for this project and comments explaining it. This work will need to be pushed to your GitHub repository in order to submit your project.  
-2. An organized **README.md** file in the GitHub repository that describes the contents of the repository. This file should be the source of information for navigating through the repository.
-3. A short **Keynote/PowerPoint/Google Slides presentation** (delivered as a PDF export) giving a high-level overview of your methodology and recommendations for non-technical stakeholders. Make sure to also add and commit this pdf of your non-technical presentation to your repository with a file name of presentation.pdf.
-4. **[A Blog Post](https://github.com/learn-co-curriculum/dsc-welcome-blogging-v2-1)**	
-5. A **Video Walkthrough** of your non-technical presentation. Some common video recording tools used are Zoom, Quicktime, and Nimbus. After you record your presentation, publish it on a service like YouTube or Google Drive, you will need a link to the video to submit your project.
+> Comps "Model" - Realtor Simulator
 
-Note: On-campus students may have different requirements, please speak with your instructor.
+> Making New Predictions
 
-### Jupyter Notebook Must-Haves
+> Explanation of Attempts - Feature Engineering/Selection
 
-For this project, your Jupyter Notebook should meet the following specifications:
+> Conclusions
+* Answers to business questions
 
-#### Organization/Code Cleanliness
+> Recommendations
 
-* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.  All functions have docstrings that act as professional-quality documentation
-* The notebook is written for technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings.
-
-#### Visualizations & EDA
-
-* Your project contains at least 4 meaningful data visualizations, with corresponding interpretations. All visualizations are well labeled with axes labels, a title, and a legend (when appropriate)  
-* You pose at least 3 meaningful questions and answer them through EDA.  These questions should be well labeled and easy to identify inside the notebook.
-    * **Level Up**: Each question is clearly answered with a visualization that makes the answer easy to understand.   
-* Your notebook should contain 1 - 2 paragraphs briefly explaining your approach to this project.
-
-#### Model Quality/Approach
-
-* Your model should not include any predictors with p-values greater than .05.  
-* Your notebook shows an iterative approach to modeling, and details the parameters and results of the model at each iteration.  
-    * **Level Up**: Whenever necessary, you briefly explain the changes made from one iteration to the next, and why you made these choices.  
-* You provide at least 1 paragraph explaining your final model.   
-* You pick at least 3 coefficients from your final model and explain their impact on the price of a house in this dataset.   
-
-
-### Non-Technical Presentation Must-Haves
-
-Another deliverable should be a Keynote, PowerPoint or Google Slides presentation delivered as a pdf file in your fork of this repository with the file name of `presentation.pdf` detailing the results of your project.  Your target audience is non-technical people interested in using your findings to maximize their profit when selling their home.
-
-Your presentation should:
-
-* Contain between 5 - 10 professional-quality slides.  
-    * **Level Up**: The slides should use visualizations whenever possible, and avoid walls of text.
-* Take no more than 5 minutes to present.   
-* Avoid technical jargon and explain the results in a clear, actionable way for non-technical audiences.   
-
-**_Based on the results of your models, your presentation should discuss at least two concrete features that highly influence housing prices._**
-
-### Blog Post Must-Haves
-
-Refer back to the [Blogging Guidelines](https://github.com/learn-co-curriculum/dsc-welcome-blogging-v2-1) for the technical requirements and blog ideas.
+> Future Work
 
 
-## The Process 
-The process for this project is identical to the process you followed for your module 1 project. We specified it again below as a refresher.
-(Note: On-campus students may have different processes, please speak with your instructor)
 
-### 1. Getting Started
-
-Please start by reviewing this document. If you have any questions, please ask them in Slack ASAP so (a) we can answer the questions and (b) so we can update this repository to make it clearer.
-
-Be sure to let the instructor team know when you’ve started working on a project, either by reaching out over Slack or, if you are in a full-time or part-time cohort, by connecting with your Cohort Lead in your weekly 1:1. If you’re not sure who to reach out to, post in the #online-ds-sp-000 channel in Slack.
-
-Once you're done with this module, please start on the project. Do that by forking this repository, cloning it locally, and working in the student.ipynb file. Make sure to also add and commit a pdf of your presentation to the repository with a file name of `presentation.pdf`.
-
-### 2. The Project Review
-
-_Note: On-campus students may have different review processes, please speak with your instructor._
-
-> **When you start on the project, please also reach out to an instructor immediately to schedule your project review** (if you're not sure who to schedule with, please ask in Slack!)
-
-#### What to expect from the Project Review
-
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation *(sometimes technical interviews will feel arbitrary or unfair - if you want to get the job, commenting on that is seldom a good choice)*.
-
-The project review is comprised of a 45 minute 1:1 session with one of the instructors. During your project review, be prepared to:
-
-#### 1. Deliver your PDF presentation to a non-technical stakeholder.
-In this phase of the review (~10 mins) your instructor will play the part of a non-technical stakeholder that you are presenting your findings to. The presentation  should not exceed 5 minutes, giving the "stakeholder" 5 minutes to ask questions.
-
-In the first half of the presentation (2-3 mins), you should summarize your methodology in a way that will be comprehensible to someone with no background in data science and that will increase their confidence in you and your findings. In the second half (the remaining 2-3 mins) you should summarize your findings and be ready to answer a couple of non-technical questions from the audience. The questions might relate to technical topics (sampling bias, confidence, etc) but will be asked in a non-technical way and need to be answered in a way that does not assume a background in statistics or machine learning. You can assume a smart, business stakeholder, with a non-quantitative college degree.
-
-#### 2. Go through the Jupyter Notebook, answering questions about how you made certain decisions. Be ready to explain things like:
-    * "How did you pick the question(s) that you did?"
-    * "Why are these questions important from a business perspective?"
-    * "How did you decide on the data cleaning options you performed?"
-    * "Why did you choose a given method or library?"
-    * "Why did you select those visualizations and what did you learn from each of them?"
-    * "Why did you pick those features as predictors?"
-    * "How would you interpret the results?"
-    * "How confident are you in the predictive quality of the results?"
-    * "What are some of the things that could cause the results to be wrong?"
-
-Think of the first phase of the review (~30 mins) as a technical boss reviewing your work and asking questions about it before green-lighting you to present to the business team. You should practice using the appropriate technical vocabulary to explain yourself. Don't be surprised if the instructor jumps around or sometimes cuts you off - there is a lot of ground to cover, so that may happen.
-
-If any requirements are missing or if significant gaps in understanding are uncovered, be prepared to do one or all of the following:
-* Perform additional data cleanup, visualization, feature selection, modeling and/or model validation
-* Submit an improved version
-* Meet again for another Project Review
-
-What won't happen:
-* You won't be yelled at, belittled, or scolded
-* You won't be put on the spot without support
-* There's nothing you can do to instantly fail or blow it
-
-**Please note: We need to receive the URL of your repository at least 24 hours before and please have the project finished at least 3 hours before your review so we can look at your materials in advance.**
+#### [predictor.ipynb](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/predictor.ipynb)
+* Separate page to make new predictions with the final model
 
 
-## Submitting your Project
 
- You’re almost done! In order to submit your project for review, include the following links to your work in the corresponding fields on the right-hand side of Learn.
+## Analysis and Conclusion
 
- 1. **GitHub Repo:** Now that you’ve completed your project in Jupyter Notebooks, push your work to GitHub and paste that link to the right. (If you need help doing so, review the resources [here](https://docs.google.com/spreadsheets/d/1CNGDhjcQZDRx2sWByd2v-mgUOjy13Cd_hQYVXPuzEDE/edit#gid=0).)
-_Reminder: Make sure to also add and commit a pdf of your non-technical presentation to the repository with a file name of presentation.pdf._
-2. **Blog Post:** Include a link to your blog post.
-3. **Record Walkthrough:** Include a link to your video walkthrough.
+#### Should Microsoft focus on launching a franchise, or focus on single film IPs?
+> Franchises generally have a higher budget, but their failure rate is far less and they are more likely to a) be profitable and b) yield a surprise hit. They do, however, have a higher variance in both budget and net income. This risk is offset by the observation that franchise films rarely fail, whereas non-franchise films make up the majority of failed films in the last 20 years. A franchise is recommended.
+![Figure 1 - Net Income of Franchise vs Non-Franchise](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/franchise_vs_non.png)
 
- Hit "I'm done" to wrap it up. You will receive an email in order to schedule your review with your instructor.
- 
- 
-## Grading Rubric
-Online students can find a PDF of the grading rubric for the project [here](https://github.com/learn-co-curriculum/dsc-mod-2-project-v2-1/blob/master/mod2_project_rubric.pdf). On-campus students may have different review processes, please speak with your instructor.
+#### What audience should the company aim for (based on MPAA rating)?
+> Various analysis shows that a movie's performance range declines in both consistency and average net income as the rating increases from G to R. G movies have both the highest consistent income range, and the lowest rate of overall failure. PG is shortly behind. PG-13 is most likely to result in a breakout hit, but has a much lower consistent income range. Lower ratings are the safest and most consistent.
+![Net by Rating](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/net_by_rating.png)
+
+#### What genre(s) should the company aim for?
+> The genres of Adventure, Animation, Fantasy, Sci-Fi and Action are the most strongly correlated with a positive net income.
+![Net by Genre](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/net_by_genre.png)
+
+#### What combination of genre, franchise and rating will result in the lowest risk?
+> While franchises involve a higher variance in both budget and net, this risk is offset by their overall higher success rate, with very few franchise films failing to yield a positive net income. This risk is further reduced by sticking to lower MPAA ratings in the G or PG range, and selecting genres that complement these ratings from the animation, sci-fi, fantasy, adventure and action categories. Overall, a G or PG franchise that utilizes Animation and a complementary category such as Adventure should be a very safe endeavor.
+
+#### What, if any, genres/ratings/franchises should be avoided?
+> Analysis of the past 20 years first shows that non-franchise films both make less money and are more likely to fail. Most of the film failures in this time period were not franchises. Films are also more likely to fail as their MPAA rating increases. R-movies in particular have a very high rate of failure, with over 30% of the failures of the last 20 years rated R. Finally, certain genres are clearly more likely to fail, with the Drama and Comedy genres representing about 58% and 42% of failures respectively (these numbers add up to 100, but these genres may be shared together on one film, meaning that film is present in both numbers). Things to be avoided include non-franchise films, higher MPAA ratings, and the Comedy, Drama and Thriller categories. These things should certainly be avoided individually, and definitely avoided in combination.
+![Failures by Rating](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/bombs_by_rating.png)
+![Failures of Non-Franchise vs Franchise](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/franchise_status_fails.png)
+![Failures by Genre](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/failures_by_genre.png)
+
+## Recommendations
 
 
-## Summary
 
-The end of module projects and project reviews are a critical part of the program. They give you a chance to both bring together all the skills you've learned into realistic projects and to practice key "business judgement" and communication skills that you otherwise might not get as much practice with.
+## Future Work
+
+King County in particular offers comprehensive map data which can be integrated into our work via geopandas. These maps include information on school district and average household income which I suspect would be strong predictors. Utilizing the King County plot lookup map, our realtors would be able to enter an address which would be converted to a lat/long, and then utilized via web scraper at GreatSchools.org to determine the property's exact school assignments. We can also use the King County map information to determine other metrics such as parks and public services, as King County offers data for all of this information.
+We also might be able to scrap Redfin for a walkability metric, but it may be more valuable to develop our own.
+
+## Presentation
+[Video - Data Science Module 1 Project](https://youtu.be/gkHU8ZpayuI)
+
+[PDF of Presentation](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/presentation.pdf)
