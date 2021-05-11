@@ -105,4 +105,4 @@ If we add features to the model, they need to be ones that an average realtor is
 ## Presentation
 [Video - Data Science Module 1 Project](https://youtu.be/gkHU8ZpayuI)
 
-[PDF of Presentation](https://github.com/threnjen/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/master/presentation.pdf)
+[PDF of Presentation](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/mod_2_project.pdf)
