@@ -1,7 +1,7 @@
 
 # Module 2 Final Project - Housing Price Predictor
 
-For: Premiere Property Management, LLC
+For: Premiere Properties, LLC
 
 By: Jenny Wadkins
 
