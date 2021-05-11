@@ -1,0 +1,2466 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20121113</pubdate>
+                <title>Parcels for King County with Address and Property Information / parcel_address_area</title>
+                <edition>One</edition>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>King County</publish>
+                </pubinfo>
+                <othercit>None</othercit>
+                <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=248349fd1c4440a3b1f46c079bb69128</onlink>
+                <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=c097837984fc4fbda86f08bb2d3f497e</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=parcel_address</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/addl_doc/KCGISCenterTermsAndConditions.pdf</onlink>
+                <onlink>http://www5.kingcounty.gov/sdc/addl_doc/KCGISCenterHelpUsingKCOpenData.pdf</onlink>
+                <onlink>https://kingcounty.maps.arcgis.com/home/item.html?id=4a5915991c4e4bc6b701117859da3f20</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>A parcel based layer providing an address based on spatial overlay where available, and a range of other property related attributes. To produce PARCEL_ADDRESS_AREA , PARCEL_AREA is spatially joined to ADDRESS_POINT to obtain address attributes, KROLLIDX_AREA to obtain a Kroll page reference, INTRMPAA_AREA to obtain potential annexation area attributes, and PLSS_AREA to obtain section-township-range. It is also joined on PIN to RPACCT_EXTR, PARCEL_EXTR, CONDOCOMPLEX_EXTR, and CONDOUNIT_EXTR to obtain property and assessment related attributes from the KC Assessor office. In many cases multiple addresses are spatially coincident with one parcel, and in those cases only one arbitrarily selected address is used to populate the address attribute information.</abstract>
+            <purpose>Provides an external GIS based source of address and property information to the King County integrated permitting system.</purpose>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20121130</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>Publication date, updated weekly</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>Weekly</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-122.550394</westbc>
+                <eastbc>-121.084384</eastbc>
+                <northbc>47.788447</northbc>
+                <southbc>47.07206</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>Not applicable</themekt>
+                <themekey>property_OpenData</themekey>
+                <themekey>property</themekey>
+                <themekey>parcel</themekey>
+                <themekey>address</themekey>
+                <themekey>information</themekey>
+                <themekey>parcel_address_area</themekey>
+                <themekey>kingcounty_opendata</themekey>
+            </theme>
+            <place>
+                <placekt>Not applicable</placekt>
+                <placekey>Pacific NW</placekey>
+                <placekey>WA</placekey>
+                <placekey>King County</placekey>
+                <placekey>Washington state</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>King County data are made available with the understanding that they shall be used exclusively by the obtainer or his/her authorized agents. Digital products may not be reproduced or redistributed in any form or by any means without the express written authorization of King County.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>King County GIS Center</cntorg>
+                    <cntper>Paul McCombs</cntper>
+                </cntorgp>
+                <cntpos>Master GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S. Jackson St. Suite 706</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-263-0142</cntvoice>
+            </cntinfo>
+        </ptcontac>
+        <browse>
+            <browsen>http://www5.kingcounty.gov/sdc/DataImages/parcel_address.jpg</browsen>
+            <browsed>JPG File of layer overlain on base of WA counties or local cities</browsed>
+            <browset>JPG</browset>
+        </browse>
+        <native>Esri ArcGIS 10.1.1.3143</native>
+    </idinfo>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>GT-polygon composed of chains</sdtstype>
+                <ptvctcnt>0</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>PLIBRARY.PROPERTY.xxxx1356516</enttypl>
+                <enttypd>area data table</enttypd>
+                <enttypds>King County</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MAJOR</attrlabl>
+                <attrdef>First six characters of the parcel identification number (PIN)</attrdef>
+                <attrdefs>PARCEL_AREA.MAJOR</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Six character code derived from PLSS or plat number. eg 092503 for section 9 in township 25, range 3.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>MINOR</attrlabl>
+                <attrdef>Last four characters of the parcel identification number (PIN)</attrdef>
+                <attrdefs>PARCEL_AREA.MINOR</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>4 characters or numbers</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PIN</attrlabl>
+                <attrdef>Parcel Identification Number</attrdef>
+                <attrdefs>PARCEL_AREA.PIN</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Ten character concatenation of the Major and Minor field</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>COMMENTS</attrlabl>
+                <attrdef>Additional information</attrdef>
+                <attrdefs>ADDRESS_POINT.COMMENTS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SITETYPE</attrlabl>
+                <attrdef>Internal code used to adjust the symbology of the site within the backoffice software</attrdef>
+                <attrdefs>ADDRESS_POINT.SITETYPE</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>See metadata for ADDR_SITETYPE_LUT.
+http://www5.kingcounty.gov/sdc/Metadata.aspx?Layer=addr_sitetype_lut</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Alias1</attrlabl>
+                <attrdef>This is an alternate name that has been applied to the street that the site is located on</attrdef>
+                <attrdefs>ADDRESS_POINT.ALIAS1</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Free text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Alias2</attrlabl>
+                <attrdef>This is a secondary alternate name that has been applied to the street that the site is located on</attrdef>
+                <attrdefs>ADDRESS_POINT.ALIAS2</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>SITEID</attrlabl>
+                <attrdef>Unique identifier</attrdef>
+                <attrdefs>ADDRESS_POINT.SITEID</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>7.0</rdommin>
+                        						
+                        <rdommax>2954765.0</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_HN</attrlabl>
+                <attrdef>House number</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_HN</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Number as a string</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_PD</attrlabl>
+                <attrdef>Prefix directional</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_PD</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, e.g., E, N, NE, NW, S ...</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_PT</attrlabl>
+                <attrdef>Prefix street type</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_PT</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, e.g., AVE, DR, HWY, LN, PL, RD, ST, STHY</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_SN</attrlabl>
+                <attrdef>Street name</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_SN</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, all capital letters, such as 101ST, LINDEN, QUEEN ANNE</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_ST</attrlabl>
+                <attrdef>Suffix street type</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_ST</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, e.g., ACRD, ALY, AVE, BLVD, ... VIA, VIS, WALK, WAY</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_SD</attrlabl>
+                <attrdef>Suffix street directional</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_SD</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, e.g., E, N, NE, NW, S, SE, SW, W</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_NUM</attrlabl>
+                <attrdef>House number</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_NUM</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Integer</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDR_FULL</attrlabl>
+                <attrdef>Complete address with house number, street name, street type, and directional</attrdef>
+                <attrdefs>ADDRESS_POINT.ADDR_FULL</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, e.g., 103RD AVE SW, 4135 FAUNTLEROY WAY S</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>FULLNAME</attrlabl>
+                <attrdef>Complete street name with type and directional, but no house number</attrdef>
+                <attrdefs>ADDRESS_POINT</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, all capital letters, such as: 83RD AVE NE, YUKON AVE S, ZURS ST</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ZIP5</attrlabl>
+                <attrdef>Five digit ZIP code</attrdef>
+                <attrdefs>ADDRESS_POINT.ZIP5</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PLUS4</attrlabl>
+                <attrdef>Plus 4 or add-on code to complete 9 digit ZIP code</attrdef>
+                <attrdefs>ADDRESS_POINT.PLUS4</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>CTYNAME</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>POSTALCTYNAME</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LAT</attrlabl>
+                <attrdef>Latitude coordinate</attrdef>
+                <attrdefs>ADDRESS_POINT.LAT</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>47.14117122</rdommin>
+                        						
+                        <rdommax>47.77783971</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LON</attrlabl>
+                <attrdef>Longitude coordinate</attrdef>
+                <attrdefs>ADDRESS_POINT.LON</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>-122.52758943</rdommin>
+                        						
+                        <rdommax>-121.08982007</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>POINT_X</attrlabl>
+                <attrdef>Washington North State Plane easting coordinate</attrdef>
+                <attrdefs>ADDRESS_POINT.POINT_X</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>1220434.5515</rdommin>
+                        						
+                        <rdommax>1577313.259</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>POINT_Y</attrlabl>
+                <attrdef>Washington North State Plane northing coordinate</attrdef>
+                <attrdefs>ADDRESS_POINT.POINT_Y</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>53466.1110416</rdommin>
+                        						
+                        <rdommax>287615.999696</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>COUNTY</attrlabl>
+                <attrdef>County in which the address point is located</attrdef>
+                <attrdefs>ADDRESS_POINT.COUNTY</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KROLL</attrlabl>
+                <attrdef>Kroll Map Book Page number</attrdef>
+                <attrdefs>KROLLIDX_AREA.KROLL</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, i.e., 1, 10, etc.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>JURIS</attrlabl>
+                <attrdef>Jurisdiction planning to annex this area</attrdef>
+                <attrdefs>INTRMPAA_AREA.JURIS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>NULL</edomv>
+                        						
+                        <edomvd>NULL</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>BIG_TEN</attrlabl>
+                <attrdef>What remains of the ten largest unincorporated urban areas of King County as determined many years ago. Used for required reporting purposes.</attrdef>
+                <attrdefs>INTRMPAA_AREA</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>BUDGET_UNIT</attrlabl>
+                <attrdef>Named subsets of data used for budget forcasting</attrdef>
+                <attrdefs>INTRMPAA_AREA.BUDGET_UNIT</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_CITY</attrlabl>
+                <attrdef>King County tax payer's address city</attrdef>
+                <attrdefs>RPACCT_EXTR.CITYSTATE (KCTAXPAYER_TAXPAYER)</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>City name extracted from CITYSTATE value from source</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_STATE</attrlabl>
+                <attrdef>King County tax payer's address state</attrdef>
+                <attrdefs>RPACCT_EXTR.CITYSTATE (KCTAXPAYER_TAXPAYER)</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PLSS</attrlabl>
+                <attrdef>Public Land Survey System (PLSS) Quarter Section. Concatenation of the PLSS quarter section, section, township, and range values</attrdef>
+                <attrdefs>PARCEL_EXTR.QUARTERSECTION, SECTION, TOWNSHIP, RANGE</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Quarter Section-Section-Township-Range, e.g., NE 17-22-9</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PROP_NAME</attrlabl>
+                <attrdef>Property name: Common identifier for parcel when available</attrdef>
+                <attrdefs>PARCEL_EXTR.PROPNAME</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, such as BICKS BROADVIEW GRILL</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PLAT_NAME</attrlabl>
+                <attrdef>Name of formal plat parcel belongs to, if applicable</attrdef>
+                <attrdefs>PARCEL_EXTR.PLATNAME</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, such as BROOKHURST 2ND ADD</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PLAT_LOT</attrlabl>
+                <attrdef>Plat lot number when available</attrdef>
+                <attrdefs>PARCEL_EXTR.PLATLOT</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String such as 15-16-17 or ALL</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PLAT_BLOCK</attrlabl>
+                <attrdef>Plat Block</attrdef>
+                <attrdefs>PARCEL_EXTR.PLATBLOCK</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>String, such as 4</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>PRESENTUSE</attrlabl>
+                <attrdef>Coded value describe the present use of the property</attrdef>
+                <attrdefs>PARCEL_EXTR.PRESENT_USE</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>0</edomv>
+                        						
+                        <edomvd>Unknown</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>2</edomv>
+                        						
+                        <edomvd>Single family (residential use / zone)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>3</edomv>
+                        						
+                        <edomvd>Duplex</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>4</edomv>
+                        						
+                        <edomvd>Triplex</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>5</edomv>
+                        						
+                        <edomvd>4-plex</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>6</edomv>
+                        						
+                        <edomvd>Single family (C/I Zone)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>7</edomv>
+                        						
+                        <edomvd>Houseboat</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>8</edomv>
+                        						
+                        <edomvd>Mobile home</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>9</edomv>
+                        						
+                        <edomvd>Single family (C/I use)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>11</edomv>
+                        						
+                        <edomvd>Apartment</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>16</edomv>
+                        						
+                        <edomvd>Apartment (Mixed use)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>17</edomv>
+                        						
+                        <edomvd>Apartment (Co-op)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>18</edomv>
+                        						
+                        <edomvd>Apartment (Subsidized)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>20</edomv>
+                        						
+                        <edomvd>Condominium (Residential)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>25</edomv>
+                        						
+                        <edomvd>Condominium (Mixed use)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>29</edomv>
+                        						
+                        <edomvd>Townhouse plat</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>38</edomv>
+                        						
+                        <edomvd>Mobile home park</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>48</edomv>
+                        						
+                        <edomvd>Condominium (Mobile Home Park)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>49</edomv>
+                        						
+                        <edomvd>Retirement facility</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>51</edomv>
+                        						
+                        <edomvd>Hotel or motel</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>55</edomv>
+                        						
+                        <edomvd>Rehabilitation center</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>56</edomv>
+                        						
+                        <edomvd>Residence Hall or Dorm</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>57</edomv>
+                        						
+                        <edomvd>Group home</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>58</edomv>
+                        						
+                        <edomvd>Resort / Lodge / Retreat</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>59</edomv>
+                        						
+                        <edomvd>Nursing home</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>60</edomv>
+                        						
+                        <edomvd>Shopping Center (Neighborhood)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>61</edomv>
+                        						
+                        <edomvd>Shopping Center (Community)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>62</edomv>
+                        						
+                        <edomvd>Shopping Center (Regional)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>63</edomv>
+                        						
+                        <edomvd>Shopping Center (Major retail)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>64</edomv>
+                        						
+                        <edomvd>Shopping Center (Speciality)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>96</edomv>
+                        						
+                        <edomvd>Retail (Line / Strip)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>101</edomv>
+                        						
+                        <edomvd>Retail store</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>104</edomv>
+                        						
+                        <edomvd>Retail (Big box)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>105</edomv>
+                        						
+                        <edomvd>Retail (Discount)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>106</edomv>
+                        						
+                        <edomvd>Office building</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>118</edomv>
+                        						
+                        <edomvd>Office Park</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>122</edomv>
+                        						
+                        <edomvd>Medical or Dental office</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>126</edomv>
+                        						
+                        <edomvd>Condominium (Office)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>130</edomv>
+                        						
+                        <edomvd>Farm</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>137</edomv>
+                        						
+                        <edomvd>Greenhouse / Nursery / Horticulture service</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>138</edomv>
+                        						
+                        <edomvd>Mining / Quarry / Ore processing</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>140</edomv>
+                        						
+                        <edomvd>Bowling Alley</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>141</edomv>
+                        						
+                        <edomvd>Campground</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>142</edomv>
+                        						
+                        <edomvd>Driving Range</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>143</edomv>
+                        						
+                        <edomvd>Golf Course</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>145</edomv>
+                        						
+                        <edomvd>Health Club</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>146</edomv>
+                        						
+                        <edomvd>Marina</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>147</edomv>
+                        						
+                        <edomvd>Movie Theatre</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>149</edomv>
+                        						
+                        <edomvd>Park, Public (Zoo \ Abroretum)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>150</edomv>
+                        						
+                        <edomvd>Park, Private (Amusement Center)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>152</edomv>
+                        						
+                        <edomvd>Ski Area</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>153</edomv>
+                        						
+                        <edomvd>Skating Rink (Ice / Roller)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>156</edomv>
+                        						
+                        <edomvd>Sport Facility</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>160</edomv>
+                        						
+                        <edomvd>Auditorium / Assembly Building</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>161</edomv>
+                        						
+                        <edomvd>Auto Showroom and Lot</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>162</edomv>
+                        						
+                        <edomvd>Bank</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>163</edomv>
+                        						
+                        <edomvd>Car Wash</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>165</edomv>
+                        						
+                        <edomvd>Church / Welfare / Religious Services</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>166</edomv>
+                        						
+                        <edomvd>Club</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>167</edomv>
+                        						
+                        <edomvd>Convenience Store without Gas</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>168</edomv>
+                        						
+                        <edomvd>Convenience Store with Gas</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>171</edomv>
+                        						
+                        <edomvd>Restaurant (Fast Food)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>172</edomv>
+                        						
+                        <edomvd>Governmental Service</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>173</edomv>
+                        						
+                        <edomvd>Hospital</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>179</edomv>
+                        						
+                        <edomvd>Mortuary / Cemetary / Crematory</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>180</edomv>
+                        						
+                        <edomvd>Parking (Commercial Lot)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>182</edomv>
+                        						
+                        <edomvd>Parking (Garage)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>183</edomv>
+                        						
+                        <edomvd>Restaurant / Lounge</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>184</edomv>
+                        						
+                        <edomvd>School (Public)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>185</edomv>
+                        						
+                        <edomvd>School (Private)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>186</edomv>
+                        						
+                        <edomvd>Service Station</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>188</edomv>
+                        						
+                        <edomvd>Tavern / Lounge</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>189</edomv>
+                        						
+                        <edomvd>Post Office / Post Service</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>190</edomv>
+                        						
+                        <edomvd>Vet / Animal Control Service</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>191</edomv>
+                        						
+                        <edomvd>Grocery Store</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>193</edomv>
+                        						
+                        <edomvd>Daycare Center</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>194</edomv>
+                        						
+                        <edomvd>Mini Lube</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>195</edomv>
+                        						
+                        <edomvd>Warehouse</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>202</edomv>
+                        						
+                        <edomvd>High Tech / Tech Flex</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>210</edomv>
+                        						
+                        <edomvd>Industrial Park</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>216</edomv>
+                        						
+                        <edomvd>Industrial Park</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>223</edomv>
+                        						
+                        <edomvd>Industrial (General Purpose)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>245</edomv>
+                        						
+                        <edomvd>Industrial (Heavy)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>246</edomv>
+                        						
+                        <edomvd>Industrial (Light)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>247</edomv>
+                        						
+                        <edomvd>Air Terminal and Hangers</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>252</edomv>
+                        						
+                        <edomvd>Mini Warehouse</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>261</edomv>
+                        						
+                        <edomvd>Terminal (Rail)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>262</edomv>
+                        						
+                        <edomvd>Terminal (Marine / Commercial Fishery)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>263</edomv>
+                        						
+                        <edomvd>Terminal (Grain)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>264</edomv>
+                        						
+                        <edomvd>Terminal (Auto / Bus /Other)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>266</edomv>
+                        						
+                        <edomvd>Utility, Public</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>267</edomv>
+                        						
+                        <edomvd>Utility, Private (Radio / TV)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>271</edomv>
+                        						
+                        <edomvd>Terminal (Marine)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>272</edomv>
+                        						
+                        <edomvd>Historic Property (Residence)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>273</edomv>
+                        						
+                        <edomvd>Historic Property (Office)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>274</edomv>
+                        						
+                        <edomvd>Historic Property (Retail)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>275</edomv>
+                        						
+                        <edomvd>Historic Property (Eat / Drink)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>276</edomv>
+                        						
+                        <edomvd>Historic Property (Loft / Warehouse)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>277</edomv>
+                        						
+                        <edomvd>Historic Property (Park / Billboard)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>278</edomv>
+                        						
+                        <edomvd>Historic Property (Transient Facility)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>279</edomv>
+                        						
+                        <edomvd>Historic Property (Recreation / Entertainment)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>280</edomv>
+                        						
+                        <edomvd>Historic Property (Misc)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>299</edomv>
+                        						
+                        <edomvd>Historic Property (Vacant Land)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>300</edomv>
+                        						
+                        <edomvd>Vacant (Single-family)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>301</edomv>
+                        						
+                        <edomvd>Vacant (Multi-family)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>309</edomv>
+                        						
+                        <edomvd>Vacant (Commercial)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>316</edomv>
+                        						
+                        <edomvd>Vacant (Industrial)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>323</edomv>
+                        						
+                        <edomvd>Reforestation (RCW 84.28)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>324</edomv>
+                        						
+                        <edomvd>Forest Land (Class - RCW 84.33)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>325</edomv>
+                        						
+                        <edomvd>Forest Land (Desig-RCW84.33)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>326</edomv>
+                        						
+                        <edomvd>Open Space (Curr Use-RCW84.34)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>327</edomv>
+                        						
+                        <edomvd>Open Space(Agric-RCW 84.34)</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>328</edomv>
+                        						
+                        <edomvd>Open Space Timber Land / Greenbelt</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>330</edomv>
+                        						
+                        <edomvd>Easement</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>331</edomv>
+                        						
+                        <edomvd>Reserve / Wilderness Area</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>332</edomv>
+                        						
+                        <edomvd>Right of Way / Utility, Road</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>333</edomv>
+                        						
+                        <edomvd>River / Creek / Stream</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>334</edomv>
+                        						
+                        <edomvd>Tideland, 1st Class</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>335</edomv>
+                        						
+                        <edomvd>Tideland, 2nd Class</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>336</edomv>
+                        						
+                        <edomvd>Transferable Development Rights</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>337</edomv>
+                        						
+                        <edomvd>Water Body, Fresh</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>339</edomv>
+                        						
+                        <edomvd>Shell Structure</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>340</edomv>
+                        						
+                        <edomvd>Bed and Breakfast</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>341</edomv>
+                        						
+                        <edomvd>Rooming House</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>342</edomv>
+                        						
+                        <edomvd>Fraternity / Sorority House</edomvd>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LOTSQFT</attrlabl>
+                <attrdef>Lot square footage</attrdef>
+                <attrdefs>PARCEL_EXTR.SQFTLOG</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>0.0</rdommin>
+                        						
+                        <rdommax>76369643.0</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LEVYCODE</attrlabl>
+                <attrdef>Code indicating which levy district the parcel belongs to. Used to determine the property taxes</attrdef>
+                <attrdefs>PARCEL_EXTR.LEVYCODE</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>4 digit integer as string</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LEVY_JURIS</attrlabl>
+                <attrdef>Name of municipal jurisdiction that the levy code is associated with. Same as DISTRICT field in RPACCT_EXTR. Note, the tax appraisal and billing calendar requires a delay of up to several months between municipal annexations and the update of this field</attrdef>
+                <attrdefs>PARCEL_EXTR.DISTRICTNAME</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>City or district name, capitalized</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NEW_CONSTR</attrlabl>
+                <attrdef>Derived from RPACCT_EXT.NEWCONSTRUCTIONFLAG field, New construction indicator</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>N</edomv>
+                        						
+                        <edomvd>Unknown</edomvd>
+                        						
+                        <edomvds>RPACCT_EXTR</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TAXVAL_RSN</attrlabl>
+                <attrdef>Alias: tax_value_reason, Taxable value reason</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>APPRLNDVAL</attrlabl>
+                <attrdef>Alias: appraised_land_value, Appraised land value (market value of the land)</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>0.0</rdommin>
+                        						
+                        <rdommax>933162100.0</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>APPR_IMPR</attrlabl>
+                <attrdef>Alias: appraised_improvements_value, Appraised improvement value (market value of the improvements)</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>0.0</rdommin>
+                        						
+                        <rdommax>723548300.0</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TAX_LNDVAL</attrlabl>
+                <attrdef>Alias: taxable_land_value, Taxable land value (value of the land excluding exemptions)</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>0.0</rdommin>
+                        						
+                        <rdommax>145496300.0</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TAX_IMPR</attrlabl>
+                <attrdef>Alias: taxable_improvements_value, Taxable improvement value (value of the improvements excluding exemptions)</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>0.0</rdommin>
+                        						
+                        <rdommax>344050966.0</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ACCNT_NUM</attrlabl>
+                <attrdef>Alias: account_number, Account number unqiue for all tax accounts. May be multiple accounts for a given parcel</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_NAME</attrlabl>
+                <attrdef>Alias: taxpayer_name, Name on record responsible for property tax. This item is not available in the version of the dataset that is downloadable from the KCGIS Center GIS Data Portal.</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_ATTN</attrlabl>
+                <attrdef>Alias: taxpayer_attention_line, Attention line for taxpayer's address.This item is not available in the version of the dataset that is downloadable from the KCGIS Center GIS Data Portal.</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_ADDR</attrlabl>
+                <attrdef>Alias: taxpayer_address, street address line for taxpayer's address</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_CTYST</attrlabl>
+                <attrdef>Alias: taxpayer_city_state, City and state for taxpayer's address</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_ZIP</attrlabl>
+                <attrdef>Alias: taxpayer_zipcode, ZIP code for taxpayer's address</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_TAXYR</attrlabl>
+                <attrdef>Alias: tax_year, Year in which the valuation fields were officially valid</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>KCTP_PAR</attrlabl>
+                <attrdef>Alias: parcel, Parcel Identification Number</attrdef>
+                <attrdefs>RPACCT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>UNIT_NUM</attrlabl>
+                <attrdef>Alias: unit_number, Condominium unit number</attrdef>
+                <attrdefs>CONDOUNIT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>BLDG_NUM</attrlabl>
+                <attrdef>Alias: bldg_number, Condominium building number</attrdef>
+                <attrdefs>CONDOUNIT_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>CONDOSITUS</attrlabl>
+                <attrdef>Alias: condo_situs, Situs Address of condominium complex, where available</attrdef>
+                <attrdefs>CONDOCOMPLEX_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>King County</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Coordinates defining the features.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>QTS</attrlabl>
+                <attrdef>PLSS quarter section parcel is in</attrdef>
+                <attrdefs>PLSS_AREA</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SEC</attrlabl>
+                <attrdef>PLSS section parcel is in</attrdef>
+                <attrdefs>PLSS_AREA</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TWP</attrlabl>
+                <attrdef>PLSS township parcel is in</attrdef>
+                <attrdefs>PLSS_AREA</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>RNG</attrlabl>
+                <attrdef>PLSS range parcel is in</attrdef>
+                <attrdefs>PLSS_AREA</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomvds>King County</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>legaldesc</attrlabl>
+                <attrdef>Abbreviated legal description when available</attrdef>
+                <attrdefs>PARCELLEGALDESC_EXTR</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>PRIMARY_ADDR</attrlabl>
+                <attrdef>Set to one, used to facilitate layer use in Accela Automation</attrdef>
+                <attrdefs>KC GIS Center</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>Shape.area</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Shape.len</attrlabl>
+            </attr>
+        </detailed>
+        <overview>
+            <eadetcit>King County</eadetcit>
+        </overview>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>KCGIS Center</cntorg>
+                    <cntper>Cheryl Wilder</cntper>
+                </cntorgp>
+                <cntpos>Data Sales Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S Jackson St, Suite 706</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-263-5220</cntvoice>
+            </cntinfo>
+        </distrib>
+        <resdesc>/plibrary2/property/shapes/polygon/parcel_address.shp</resdesc>
+        <distliab>King County disclaims any warranty of use of any digital product or data beyond that for which it was designed.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>featureclass and shapefile</formname>
+                </digtinfo>
+            </digform>
+            <fees>Contact KCGIS Client Services for the cost of reproduction - http://www.kingcounty.gov/operations/GIS/GISData/GISDataDistribution.aspx</fees>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20160406</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>King County GIS Center</cntorg>
+                    <cntper>Paul McCombs</cntper>
+                </cntorgp>
+                <cntpos>Master GIS Analyst</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>201 S. Jackson St. Suite 706</address>
+                    <city>Seattle</city>
+                    <state>WA</state>
+                    <postal>98104</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>206-263-0142</cntvoice>
+                <cntemail>firstname.lastname@kingcounty.gov</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
