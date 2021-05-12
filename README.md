@@ -83,6 +83,7 @@ By: Jenny Wadkins
 >![Figure 3 - Price per Square Foot per Total Square Footage, by Zip Code Median](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/pr_sf_zip.png)
 
 > As they say, location is everything, and it is the primary influencing factor for a home price in the King County metro area. Our darkest areas, and therefore highest value sales, are clustered in and around Seattle to the west of Lake Washington and into the eastern lake cities of Bellevue and Redmond which are the technical employer hubs of the region. As we move away from Seattle and the tech hubs into the suburbs, our prices clearly go down.
+
 >![Figure 1 - Housing Sales in King County by Location](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/map_housing_dots_cropped.png)
 
 > These three features alone explain 85% of the price variance.
@@ -92,6 +93,8 @@ By: Jenny Wadkins
 
 #### Is a model-based system more accurate for determining list price than the traditional comps-based system?
 >At present, the regression model is only slightly more accurate than the comps-based system on our test data - and this is even with our comps-based simulator lacking a feature set as robust as our model. In fact our realtor simulator performed better on new data than our model. The model is lacking something - quality start data, predictive features, or something else - and we should identify and include them.
+> The house in this image sold for 665k. The model predicted it at 784k, while the "realtor simulator" used comps to predict it at 663k. While this is a particularly egregious example of the disparity between our model and comps, it certainly highlights the problem - the model is currently only a baseline, and requires comp work regardless to produce a confident final answer.
+
 >![Figure 1 - Housing Sales in King County by Location](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/comps_plat.png)
 
 #### What easy-to-use features can we add to our model to increase its accuracy?
