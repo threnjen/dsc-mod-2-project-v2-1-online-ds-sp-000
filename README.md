@@ -74,20 +74,23 @@ By: Jenny Wadkins
 
 ## Analysis
 
-> Stuff here about the model
+> Our final model utilizes a combination of continuous variables and one-hot-encoded categoricals to produce a linear regression with R^2 of 88.2% and a mean absolute error of 56k. I tried several different transformations including polynomial features, mean target encoding on zip code, zip code binning, and zip code median rank as a continuous, and ALL of these efforts resulted in a lower R^2 and higher mean absolute error, leading to a final decision to one-hot encode all 70 zip codes individually. This resulted in the greatest accuracy despite a model that is more "messy" with a large number of features.
+> Features were selected using the sklean "Recursive Feature Elimination with Cross Validation" function, or RFECV. RFECV uses cross-validation and begins the model with all features, then eliminates the weakest feature and checks the model again, using cv with each iteration. At the end it returns the model with the feature set that produced the highest score on the cv. In the case of price predictions I used mean absolute error as my preferred scoring metric.
+> P-value of included features such as sqft_living, grade and many zip codes was so low that the chances of these features being explained by random variation is nearly astronomical.
+> ![Statistical Model Summary](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/output.png)
 
 ## Conclusion
 
 #### What are the primary factors influencing housing prices in the King County metro area?
 > As square footage increases so does quality of materials. Most importantly you can see the upward price trend with both increased square footage and materials grade. I was intrigued that our lower bound of data points is very linear, but as our square footage increases, the upper bound gradually breaks away with higher variance. 
->![Figure 2 - Total Price per Total Square Footage, by Grade](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/pr_grade.png)
+>![Total Price per Total Square Footage, by Grade](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/pr_grade.png)
 
 >Here we are showing our price per square foot compared to total square footage, colored by our zipcode median value rank. I ranked the 70 zip codes in King County by median home value, and using those ranks to color our data points, you can see how price per square foot increases as median zip rank increases.  Our low median zip codes have a low price per square footage, and you can see in the color bands how our price per square foot increases with zip code median. I found it interesting in this visual how most of the zip codes exhibit a clear trend of price per square foot decreasing with increased total square footage, which is entirely normal, but certain very high value zip codes seem to retain their high price per square foot regardless of total square footage. These breakaway values correspond to the previous slide's upper bound with more variance. Certain zip codes seem immune to the usual price per square foot decay.
->![Figure 3 - Price per Square Foot per Total Square Footage, by Zip Code Median](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/pr_sf_zip.png)
+>![Price per Square Foot per Total Square Footage, by Zip Code Median](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/pr_sf_zip.png)
 
 > As they say, location is everything, and it is the primary influencing factor for a home price in the King County metro area. Our darkest areas, and therefore highest value sales, are clustered in and around Seattle to the west of Lake Washington and into the eastern lake cities of Bellevue and Redmond which are the technical employer hubs of the region. As we move away from Seattle and the tech hubs into the suburbs, our prices clearly go down.
 
->![Figure 1 - Housing Sales in King County by Location](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/map_housing_dots_cropped.png)
+>![Housing Sales in King County by Location](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/map_housing_dots_cropped.png)
 
 > These three features alone explain 85% of the price variance.
 
