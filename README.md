@@ -7,7 +7,7 @@ By: Jenny Wadkins
 
 ## Introduction
 
->Premiere Properties, LLCt has asked me to develop a housing predictor tool. The market recently has exploded with volatility and unpredictability, with houses going 30k, 50k or even 100k over asking. Realtors need a better tool to price and predict homes. The tool should be easy to both use and understand, and use features that a realtor can input.
+>Premiere Properties, LLC has asked me to develop a housing predictor tool. The market recently has exploded with volatility and unpredictability, with houses going 30k, 50k or even 100k over asking. Realtors need a better tool to price and predict homes. The tool should be easy to both use and understand, and use features that a realtor can input.
 
 ## Questions
 
@@ -72,8 +72,11 @@ By: Jenny Wadkins
 > Explanation of Attempts - Feature Engineering/Selection
 
 
-## Analysis and Conclusion
+## Analysis
 
+> Stuff here about the model
+
+## Conclusion
 
 #### What are the primary factors influencing housing prices in the King County metro area?
 > As square footage increases so does quality of materials. Most importantly you can see the upward price trend with both increased square footage and materials grade. I was intrigued that our lower bound of data points is very linear, but as our square footage increases, the upper bound gradually breaks away with higher variance. 
