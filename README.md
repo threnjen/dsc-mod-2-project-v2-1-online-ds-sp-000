@@ -94,7 +94,7 @@ By: Jenny Wadkins
 
 > Our data is skewed slightly left. Our data has high kurtosis which implies tighter grouping of our residuals around zero and fewer outliers, which implies a fitted model.
 
-> Durbin Watson is a measure of homoscedasticity - an even distribution of efforts. We are showing slight heteroscedasticity because we'd like to see this number between 1 and 2. We saw that heteroscedasticity in the residuals.
+> Durbin Watson is a measure of homoscedasticity - an even distribution of errors. We are showing slight heteroscedasticity because we'd like to see this number between 1 and 2. We saw that heteroscedasticity in the residuals.
 
 > Our low condition number implies no multicollinearity with our features.
 
