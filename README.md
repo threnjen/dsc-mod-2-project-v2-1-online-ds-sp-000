@@ -55,14 +55,18 @@ By: Jenny Wadkins
 > Final Model
 * Process and train final model on data
 * Saving model assets for later use
+* Evaluating final model stats
 
 > Making Predictions with New Data
-* Making new predictions on one entry or imported csv
+* Making new predictions on one entry and imported csv
 
 > Visualizations
 * Feature visualizations
 * Geopandas geographical visualizations
 * Comps model geographical visualization
+
+> Analysis
+* Statistical analysis and explanations
 
 > Conclusions and Recommendations
 * Answers to business questions
