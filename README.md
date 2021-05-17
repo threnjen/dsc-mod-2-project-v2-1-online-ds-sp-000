@@ -82,7 +82,7 @@ By: Jenny Wadkins
 
 > Our final model utilizes a combination of continuous variables and one-hot-encoded categoricals to produce a linear regression with R^2 of 88.2% and a mean absolute error of 56k. I tried several different transformations including polynomial features, mean target encoding, lower-granularity binning, and median rank as a continuous, and ALL of these efforts resulted in a lower R^2 and higher mean absolute error, leading to a final decision to one-hot encode all 70 zip codes individually. Similar efforts on other categoricals such as age and month sold also did not improve the model over one-hot encoding. This resulted in the greatest accuracy despite a model that is more "messy" with a large number of features.
 
-> Features were selected using the sklean "Recursive Feature Elimination with Cross Validation" function, or RFECV. RFECV uses cross-validation and begins the model with all features, then eliminates the weakest feature and scores the model again, using cv with each iteration. At the end it returns the model with the feature set that produced the highest score on the cv. In the case of price predictions I used mean absolute error as my preferred scoring metric.
+> Features were selected using the sklean "Recursive Feature Elimination with Cross Validation" function, or RFECV. RFECV uses cross-validation and begins the model with all features, then eliminates the weakest feature and scores the model again, using cv with each iteration. At the end it returns the model with the feature set that produced the highest score on the cv. In the case of price predictions I used mean absolute error as my preferred scoring metric. Then, starting with the features recommended by RFECV, I ran the model again through a forward-backward feature selector, which starts with zero features and iteratively adds and subtracts features until all features have a p-value under the threshold (in this case .05). 
 
 > Almost all included features had p-values so low that the probability that these features are influencing the price by random chance is near zero. Our highest included p-value, zipcode 98003, has only a .3% chance of having influenced prices by random chance.
 
@@ -92,7 +92,6 @@ By: Jenny Wadkins
 
 > Omnibus and prob(omnibus) tell us that our residuals are not normally distributed. We want to see a value close to 0 for Omnibus, and a value close to 1 for Prob(Omnibus). Neither of these things is the case. We saw heteroscedasticity on the residuals for all of our model types that we tried. All of our models seem to perform well at lower prices and then variance increases as price increases. This was true on both linear and nonlinear approaches such as decision trees.
 >![Residuals](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/residuals.png)
-
 
 > Our data is skewed slightly left. Our data has high kurtosis which implies tighter grouping of our residuals around zero and fewer outliers, which implies a fitted model.
 
@@ -115,10 +114,10 @@ By: Jenny Wadkins
 
 >![Housing Sales in King County by Location](https://github.com/threnjen/dsc-mod-2-project-v2-1-online-ds-sp-000/blob/master/images/map_housing_dots_cropped.png)
 
-> These three features alone explain 85% of the price variance.
+> These three features alone - square footage, grade, and zip code - explain 85% of the price variance.
 
 #### Can we effectively use a regression model based system for realtors to determine a proper list price?
-> Our regression model, while explaining over 88% of the price variance with our features, was nonetheless far from accurate in absolute terms. A mean average error of 55k in either direction is a huge variance to a home price - one that is so large that it renders the prediction much less meaningful and useful. Other models need to be explored, better data needs to be sourced, or easy-to-use features that an average realtor is capable of evaluating/acquiring should be added to the model to improve its predictive quality. The model is providing at best a baseline starting point.
+> Our regression model, while explaining over 88% of the price variance with our features, was nonetheless far from accurate in absolute terms. A mean average error of 56k in either direction is a huge variance to a home price - one that is so large that it renders the prediction much less meaningful and useful. Other models need to be explored, better data needs to be sourced, or easy-to-use features that an average realtor is capable of evaluating/acquiring should be added to the model to improve its predictive quality. The model is providing at best a baseline starting point.
 
 #### Is a model-based system more accurate for determining list price than the traditional comps-based system?
 >At present, the regression model is only slightly more accurate than the comps-based system on our test data - and this is even with our comps-based simulator lacking a feature set as robust as our model. In fact our realtor simulator performed better on new data than our model. The model is lacking something - quality start data, predictive features, or something else - and we should identify and include them.
